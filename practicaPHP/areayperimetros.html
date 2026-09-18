@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadoras y Operaciones en PHP</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            max-width: 1200px;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 350px;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 1.3rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        input[type="number"]:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .btn-circulo { background-color: #3498db; }
+        .btn-triangulo { background-color: #27ae60; }
+        .btn-comparar { background-color: #9b59b6; }
+    </style>
+</head>
+<body>
+
+    <h1 style="color: #2c3e50; margin-bottom: 30px; text-align: center;">Panel de Operaciones PHP</h1>
+
+    <div class="container">
+        
+        <!-- Formulario 1: Círculo -->
+        <div class="card">
+            <h2>Círculo (Área y Perímetro)</h2>
+            <form action="circulo.php" method="POST">
+                <label for="radio">Ingresa el radio:</label>
+                <input type="number" step="any" name="radio" id="radio" placeholder="Ej. 5" required>
+                <button type="submit" class="btn-circulo">Calcular Círculo</button>
+            </form>
+        </div>
+
+        <!-- Formulario 2: Triángulo -->
+        <div class="card">
+            <h2>Triángulo (Área y Perímetro)</h2>
+            <form action="triangulo.php" method="POST">
+                <label for="base">Ingresa la base:</label>
+                <input type="number" step="any" name="base" id="base" placeholder="Ej. 10" required>
+
+                <label for="altura">Ingresa la altura:</label>
+                <input type="number" step="any" name="altura" id="altura" placeholder="Ej. 5" required>
+                <button type="submit" class="btn-triangulo">Calcular Triángulo</button>
+            </form>
+        </div>
+
+        <!-- Formulario 3: Comparar Números -->
+        <div class="card">
+            <h2>Comparar dos Números</h2>
+            <form action="comparar.php" method="POST">
+                <label for="num1">Primer número:</label>
+                <input type="number" step="any" name="num1" id="num1" placeholder="Ej. 15" required>
+
+                <label for="num2">Segundo número:</label>
+                <input type="number" step="any" name="num2" id="num2" placeholder="Ej. 8" required>
+                <button type="submit" class="btn-comparar">Comparar Números</button>
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>
