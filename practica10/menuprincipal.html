@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Principal</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .menu-card {
+            background-color: #1e1e1e;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            border: 1px solid #2e2e2e;
+        }
+        .menu-card h2 {
+            margin-bottom: 2rem;
+            color: #00bcd4;
+        }
+        .menu-options {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+        .btn-menu {
+            display: block;
+            padding: 1rem;
+            background-color: #2a2a2a;
+            color: #00bcd4;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 1px solid #00bcd4;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.2s;
+        }
+        .btn-menu:hover {
+            background-color: #00bcd4;
+            color: #121212;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-card">
+        <h2>Panel de Módulos</h2>
+        <div class="menu-options">
+            <a href="nomina.php" class="btn-menu">Nómina</a>
+            <a href="gestionpromedios.php" class="btn-menu">Alumnos</a>
+            <a href="facturacionrefacciones.php" class="btn-menu">Refaccionaria</a>
+        </div>
+    </div>
+
+</body>
+</html>
